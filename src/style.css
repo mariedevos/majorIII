@@ -1,0 +1,56 @@
+@import './css/reset.css';
+@import './css/vars.css';
+@import './css/header.css';
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+/* stylelint-disable */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* stylelint-enable */
+
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+}
+
+.overlay {
+  visibility: hidden;
+  position: absolute;
+  top: 53vh;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35rem;
+}
+
+.overlay__nameinput {
+  width: 35rem;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  background-color: transparent;
+  border: .3rem solid #66a2a5;
+  color: white;
+}
+
+.overlay__nameinput:focus {
+  outline: none;
+}
