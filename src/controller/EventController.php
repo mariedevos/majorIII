@@ -5,35 +5,42 @@ require_once __DIR__ . '/../dao/EventDAO.php';
 
 class EventController extends Controller {
 
-  private $todoDAO;
+  private $EventDAO;
 
   function __construct() {
     $this->EventDAO = new EventDAO();
   }
 
+
   public function index() {
-    if (!empty($_GET['action']) && $_GET['action'] == 'filter') {
-      $players = $this->EventDAO->search(25, $_GET['name'], $_GET['nationality']);
-      $this->set('title', "Players for ". $_GET['name']);
-      $this->set('name',$_GET['name']);
-      $this->set('nationality',$_GET['nationality']);
-    }else{
-      $players = $this->EventDAO->search();
-      $this->set('title', "Top 10");
-      $this->set('name','');
-      $this->set('nationality','');
-    }
+    $acts = $this->EventDAO->selectAll();
+    $this->set('acts', $acts);
 
-    $this->set('players', $players);
-
-    $this->set('countries', $this->EventDAO->selectAllCountries());
-    if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
-
-      header('Content-Type: application/json');
-      echo json_encode($players);
-      exit();
-    }
   }
+
+  // public function index() {
+  //   if (!empty($_GET['action']) && $_GET['action'] == 'filter') {
+  //     $players = $this->EventDAO->search(25, $_GET['name'], $_GET['nationality']);
+  //     $this->set('title', "Players for ". $_GET['name']);
+  //     $this->set('name',$_GET['name']);
+  //     $this->set('nationality',$_GET['nationality']);
+  //   }else{
+  //     $players = $this->EventDAO->search();
+  //     $this->set('title', "Top 10");
+  //     $this->set('name','');
+  //     $this->set('nationality','');
+  //   }
+
+  //   $this->set('players', $players);
+
+  //   $this->set('countries', $this->EventDAO->selectAllCountries());
+  //   if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
+
+  //     header('Content-Type: application/json');
+  //     echo json_encode($players);
+  //     exit();
+  //   }
+  // }
 /*
   private function handleSearchPlayer() {
 

@@ -1,7 +1,7 @@
 require('./style.css');
 {
   const $filterForm = document.querySelector(`.filter__form`),
-    $players = document.querySelector(`.players__list`);
+    $acts = document.querySelector(`.players__list`);
 
   const init = () => {
     if ($filterForm) {
@@ -10,7 +10,7 @@ require('./style.css');
   };
 
   const handleLoadPlayers = data => {
-    $players.innerHTML = data
+    $actss.innerHTML = data
       .map(player => createPlayerListItem(player))
       .join(``);
   };

@@ -5,7 +5,7 @@ require_once( __DIR__ . '/DAO.php');
 class EventDAO extends DAO {
 
   public function search($max=10, $name = '', $nationality = ''){
-    $sql = "SELECT * FROM `players` WHERE 1";
+    $sql = "SELECT * FROM `acts` WHERE 1";
 
     if (!empty($name)) {
       $sql .= " AND `Name` LIKE :name";
@@ -14,7 +14,7 @@ class EventDAO extends DAO {
       $sql .= " AND `Nationality` = :nationality";
     }
 
-    $sql .= " ORDER BY `Overall` DESC LIMIT :max";
+    $sql .= " ORDER BY `id` DESC LIMIT :max";
 
     $stmt = $this->pdo->prepare($sql);
     if (!empty($name)) {
@@ -55,19 +55,26 @@ class EventDAO extends DAO {
   //   return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  public function selectAllCountries() {
-    $sql = "SELECT DISTINCT `Nationality` FROM `players` ORDER BY `Nationality` ASC";
-    $stmt = $this->pdo->prepare($sql);
-    $stmt->execute();
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
-  }
+  // public function selectAllCountries() {
+  //   $sql = "SELECT DISTINCT `Nationality` FROM `acts` ORDER BY `Nationality` ASC";
+  //   $stmt = $this->pdo->prepare($sql);
+  //   $stmt->execute();
+  //   return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  // }
 
   public function selectById($id){
-    $sql = "SELECT * FROM `players` WHERE `Id` = :id";
+    $sql = "SELECT * FROM `acts` WHERE `Id` = :id";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':id', $id);
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
+  public function selectAll(){
+    $sql = "SELECT * FROM `acts`";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
 
