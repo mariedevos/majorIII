@@ -11,11 +11,21 @@ class DataController extends Controller {
     $this->DataDAO = new DataDAO();
   }
 
-
   public function index() {
     $data = $this->DataDAO->selectAll();
-    $this->set('data', $date);
-
+    $this->set('data', $data);
   }
+
+  public function programma() {
+    $data = $this->DataDAO->selectAll();
+    $this->set('data', $data);
+  }
+
+  public function detail() {
+    $data = $this->DataDAO->selectAll();
+    $this->set('data', $data);
+  }
+}
+
 
 }

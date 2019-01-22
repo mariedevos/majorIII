@@ -9,14 +9,12 @@
     ?>
     <li class='act'>
         <p><?php echo $act["artiest"];?></p>
-        <p><?php echo $act["titel"];?></p>
+        <p><?php echo $act["acts_id"];?></p>
 
     </li>
     <?php
   }
 ?>
-
-
 
   <button>ontdek de voorstellingen</button>
   </section>
@@ -25,7 +23,7 @@
   <h2>zaterdag familiedag</h2>
   <img src="" alt="">
   <p>Op zaterdag organiseert het internationaal straattheater festival Beveren een Speciale familie dag. Op deze dag zijn er speciale acts en voorstellingen geschikt voor het gezin! </p>
-  <button>ontdek de voorstellingen</button>
+  <a class="button" href="index.php?page=programma">ontdek de voorstellingen  &rtrif; </a>
   </section>
 
   <section class="quote">
@@ -44,4 +42,4 @@
   </section>
 
   </main>
-  </body>
+
