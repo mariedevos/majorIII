@@ -1,4 +1,4 @@
-<ul class="acts__list">
+<!-- <ul class="acts__list">
 <?php
   foreach($acts as $act){
     ?>
@@ -10,4 +10,4 @@
     <?php
   }
 ?>
-</ul>
+</ul> -->
