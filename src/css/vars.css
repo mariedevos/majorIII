@@ -1,0 +1,12 @@
+:root {
+  --client-dark-grey: #666;
+  --client-darkest-grey: #444;
+  --client-black: #222;
+  --client-blue: #407ab1;
+}
+
+@custom-media --xs screen and (min-width: 0);
+@custom-media --sm screen and (min-width: 23em);
+@custom-media --md screen and (min-width: 38em);
+@custom-media --lg screen and (min-width: 60em);
+@custom-media --xl screen and (min-width: 86em);
