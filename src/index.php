@@ -4,14 +4,22 @@ ini_set('display_errors', true);
 error_reporting(E_ALL);
 
 $routes = array(
-  'home' => array(
-    'controller' => 'Event',
+  'index' => array(
+    'controller' => 'act',
     'action' => 'index'
+  ),
+  'programma' => array(
+    'controller' => 'act',
+    'action' => 'programma'
+  ),
+  'detail' => array(
+    'controller' => 'act',
+    'action' => 'detail'
   )
 );
 
 if(empty($_GET['page'])) {
-  $_GET['page'] = 'home';
+  $_GET['page'] = 'index';
 }
 if(empty($routes[$_GET['page']])) {
   header('Location: index.php');

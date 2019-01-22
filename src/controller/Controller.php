@@ -6,11 +6,11 @@ class Controller {
   protected $viewVars = array();
   protected $env = 'development';
 
-  public function filter() {
-    if (basename(dirname(dirname(__FILE__))) != 'src') {
-      $this->env = 'production';
+   public function filter() {
+     if (basename(dirname(dirname(__FILE__))) != 'src') {
+     $this->env = 'production';
     }
-    call_user_func(array($this, $this->route['action']));
+   call_user_func(array($this, $this->route['action']));
   }
 
   public function render() {

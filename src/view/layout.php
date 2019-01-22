@@ -10,66 +10,22 @@
   <body>
   <header>
   <aside>nog 70 nachtjes slapen tot het intertnationaal straatheater festival</aside>
-  <h1><p class="hidden">internationaal straattheater festival Beveren</p></h1>
+  <h1>
+  <a href="index.php?page=home">.</a>
+  <p class="hidden">internationaal straattheater festival Beveren</p>
+  </h1>
   <nav>
   <ul>
-  <li><a href="">programma</a></li>
-  <li><a href="">activiteiten</a></li>
-  <li><a href="">praktische info</a></li>
+  <li><a href="index.php?page=programma">programma</a></li>
+  <li><a href="index.php?page=activiteiten">activiteiten</a></li>
+  <li><a href="index.php?page=praktisch">praktische info</a></li>
   </ul>
   </nav>
   </header>
 
-  <main>
-  <section class="voorstellingen">
-  <h2>uitgelichte voorstellingen</h2>
 
-<!-- <ul class="acts">
-<?php
-  foreach($acts as $act){
-    ?>
-    <li>
-      <article class="act">
-        <h3><?php echo $act["artiest"];?></h3>
-        <h4><?php echo $act["titel"];?></h4>
-        <p><?php echo $act["land"];?></p>
-      </article>
-    </li>
-    <?php
-  }
-?>
-</ul> -->
+	        <?php echo $content;?>
 
-  <button>ontdek de voorstellingen</button>
-  </section>
+	    <?php echo $js; ?>
 
-  <section class="familiedag">
-  <h2>zaterdag familiedag</h2>
-  <img src="" alt="">
-  <p>Op zaterdag organiseert het internationaal straattheater festival Beveren een Speciale familie dag. Op deze dag zijn er speciale acts en voorstellingen geschikt voor het gezin! </p>
-  <button>ontdek de voorstellingen</button>
-  </section>
-
-  <section class="quote">
-  <blockquote>"een weekend vol verwondering en bewondering"</blockquote>
-  </section>
-
-  <section class="kaart">
-    <h2>kaart van Beveren</h2>
-    <img class="kaart-img" src="assets/img/kaartbeveren.svg" alt="">
-  </section>
-
-  <section>
-    <h2>praktische info</h2>
-    <button>toegankelijkheid</button>
-    <button>word vrijwilliger</button>
-  </section>
-
-  </main>
-
-      <section class="players">
-        <?php echo $content;?>
-        </section>
-    <?php echo $js; ?>
-  </body>
 </html>

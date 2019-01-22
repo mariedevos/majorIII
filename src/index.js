@@ -10,7 +10,7 @@ require('./style.css');
   };
 
   const handleLoadPlayers = data => {
-    $actss.innerHTML = data
+    $acts.innerHTML = data
       .map(player => createPlayerListItem(player))
       .join(``);
   };
