@@ -5,7 +5,6 @@
   display: none;
 }
 
-
 header{
   @media (--xs) {
     display: grid;
@@ -22,9 +21,12 @@ header{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     'aside logo nav';
-    margin-top: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 94%;
+    margin: 0 auto;
+    border-bottom: 0.1px solid lightgray;
   }
-
 
 }
 
@@ -37,14 +39,32 @@ aside {
   display: flex;
   align-items: center;
 
+}
 
+.foto-home {
+  width: 230px;
+  height: 300px;
+  object-fit: cover;
+  z-index: 1;
 
 }
 
+.act:nth-child(odd) {
+  margin-top: -3rem;
+}
+
 .button {
+  background-image: url(assets/img/button.svg);
+  background-repeat: no-repeat;
+  padding: 0.6rem;
   outline: none;
-  background-color: #ABD0C7;
+  text-decoration: none;
+  /* background-color: #ABD0C7; */
   color: white;
+}
+
+.familiedag-text{
+  margin-bottom:2rem;
 }
 
 h1 {
@@ -58,7 +78,6 @@ h1 {
 
 h2 {
   font-family: 'alvania', Arial, Helvetica, sans-serif;
-
   color: #613c6b;
 }
 
@@ -74,9 +93,6 @@ body {
   justify-content: space-around;
   align-items: center;
 } */
-
-
-
 
 a {
   color: black;
@@ -96,8 +112,10 @@ ul {
 
 main {
   display: grid;
-  grid-template-columns: 2fr 1fr 1.5fr;
+  grid-template-columns: 1.6fr 1.2fr 1.5fr;
   grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+  margin: 3rem;
 
   grid-template-areas:
     'voorstellingen familiedag quote'
@@ -105,21 +123,44 @@ main {
     'praktisch kaart kaart';
 }
 
-nav{
-
-
+nav {
   display: grid;
   align-content: center;
   margin: 0 auto;
   grid-area: nav;
 }
 
+.act-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: end;
+  grid-gap: 2rem;
+}
+
+.act-titel {
+  background-color: #613c6b;
+  z-index: 2;
+  position: absolute;
+  color: white;
+}
+
 .voorstellingen {
   grid-area: voorstellingen;
+  padding-right: 3rem;
+  border-right: 0.1px solid lightgray;
+}
+
+.voorstellingen-titel {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.2rem;
+  margin-bottom: 1.8rem;
 }
 
 .kaart {
   grid-area: kaart;
+  border-top: 0.1px solid lightgray;
+  padding: 2rem;
 
 }
 
@@ -134,6 +175,9 @@ nav{
 
 .familiedag {
   grid-area: familiedag;
+  padding-right: 4rem;
+  border-right: 0.1px solid lightgray;
+
 }
 
 .quote {
@@ -141,8 +185,12 @@ nav{
   margin: 0 auto;
 }
 
+.info {
+  display: flex;
+  flex-direction: column;
+}
 
-footer{
+footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -152,13 +200,26 @@ footer{
 
 }
 
-.contact{
+.contact {
   display: flex;
   flex-direction: column;
 }
 
-blockquote{
+blockquote {
   font-family: 'baksosapi', Arial, Helvetica, sans-serif;
   color: #D2513A;
   font-size: 1rem;
+}
+
+.programma {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: center;
+}
+
+.foto {
+margin: 0 auto;
+width: 250px;
+  height: 250px;
+  object-fit: cover;
 }

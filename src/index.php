@@ -8,6 +8,7 @@ $routes = array(
     'controller' => 'act',
     'action' => 'index'
   ),
+
   'programma' => array(
     'controller' => 'act',
     'action' => 'programma'

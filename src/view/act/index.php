@@ -1,28 +1,24 @@
-
-
   <main>
-  <section class="voorstellingen">
-  <h2>uitgelichte voorstellingen</h2>
-
-  <?php
-  foreach($acts as $act){
-    ?>
-    <li class='act'>
-        <p><?php echo $act["artiest"];?></p>
-        <p><?php echo $act["acts_id"];?></p>
-
-    </li>
-    <?php
-  }
-?>
-
-  <button>ontdek de voorstellingen</button>
-  </section>
+    <section class="voorstellingen">
+      <h2 class="voorstellingen-titel ">uitgelichte voorstellingen</h2>
+      <div class='act-home'>
+        <?php foreach($acts as $act){ ?>
+          <article class="act">
+            <div class="act-titel">
+              <h3><?php echo $act["titel"];?></h3>
+              <h4><?php echo $act["artiest"];?></h4>
+            </div>
+            <img  class='foto-home' src="assets/img/<?php echo $act['foto'];?>.jpg" alt="">
+          </article>
+          <?php } ?>
+          </div>
+          <a class="button" href="index.php?page=programma">ontdek de voorstellingen  &rtrif; </a>
+      </section>
 
   <section class="familiedag">
   <h2>zaterdag familiedag</h2>
   <img src="" alt="">
-  <p>Op zaterdag organiseert het internationaal straattheater festival Beveren een Speciale familie dag. Op deze dag zijn er speciale acts en voorstellingen geschikt voor het gezin! </p>
+  <p class="familiedag-text">Op zaterdag organiseert het internationaal straattheater festival Beveren een Speciale familie dag. Op deze dag zijn er speciale acts en voorstellingen geschikt voor het gezin! </p>
   <a class="button" href="index.php?page=programma">ontdek de voorstellingen  &rtrif; </a>
   </section>
 
@@ -35,10 +31,10 @@
     <img class="kaart-img" src="assets/img/kaartbeveren.svg" alt="">
   </section>
 
-  <section>
+  <section class="info">
     <h2>praktische info</h2>
-    <button>toegankelijkheid</button>
-    <button>word vrijwilliger</button>
+    <a class="button" href="index.php?page=programma"> toegankelijkheid  &rtrif; </a>
+    <a class="button" href="index.php?page=programma"> word vrijwilliger  &rtrif; </a>
   </section>
 
   </main>

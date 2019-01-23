@@ -12,13 +12,15 @@ class DataController extends Controller {
   }
 
   public function index() {
-    $data = $this->DataDAO->selectAll();
+    $data = $this->DataDAO->selectById($id);
+    exit();
     $this->set('data', $data);
-  }
+}
 
   public function programma() {
-    $data = $this->DataDAO->selectAll();
+    $data = $this->DataDAO->selectById($id);
     $this->set('data', $data);
+
   }
 
   public function detail() {
@@ -27,5 +29,3 @@ class DataController extends Controller {
   }
 }
 
-
-}
