@@ -6,7 +6,17 @@
 }
 
 header{
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 320px){
+    display: grid;
+
+    grid-template-rows: 1fr 0.5fr 1fr;
+    grid-template-areas:
+    'logo'
+    'nav'
+    'aside';
+  }
+
+  /* @media only screen and (max-width: 768px) {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -18,7 +28,7 @@ header{
     align-content: center;
     margin: 0 auto;
 
-  }
+  } */
 
   /* @media (--md) {
     display: grid;
@@ -39,15 +49,15 @@ header{
   color: #F9C553;
 
 }
-
+/*
 .aside-ster{
   position: absolute;
   z-index: 3;
   margin-left: -7rem;
   margin-top: -1rem;
-}
+} */
 
-aside:after{
+/* aside:after{
   content: " ";
     position: absolute;
     display: block;
@@ -62,9 +72,9 @@ aside:after{
     -webkit-transform: skew(10deg, 0deg);
     transform: skew(10deg, 0deg);
 
-}
+} */
 
-aside {
+/* aside {
   line-height: 1.3rem;
   position: relative;
   width: 18rem;
@@ -74,7 +84,7 @@ aside {
   display: flex;
   align-items: center;
 
-}
+} */
 
 .foto-home {
   width: 230px;
@@ -109,9 +119,8 @@ aside {
 
 .logo-home{
 
-
   grid-area: logo;
-  margin: 0 auto;
+
 }
 
 
@@ -163,18 +172,16 @@ main {
 }
 
 nav {
-  display: grid;
-  align-content: center;
-  margin: 0 auto;
+  /* display: grid; */
   grid-area: nav;
 
-  @media only screen and (max-width: 768px) {
+  /* @media only screen and (max-width: 320px) {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
 
     align-self:stretch;
 
-  }
+  } */
 }
 
 .act-home {
@@ -266,16 +273,22 @@ blockquote {
 }
 
 .programma {
-  display: grid;
+  @media only screen and (max-width: 320px){
+    display: grid;
+    jusify-content:center;
+    grid-auto-rows: auto;
+    grid-row-gap: 2rem;
+
+  }
+
+  /* display: grid;
   grid-template-columns: 30% 30% 30%;
   justify-content: center;
-  height: 1000px;
+  height: 1000px; */
 
 }
 
-.programma-item{
-  margin: 3rem;
-}
+
 
 .foto {
 margin: 0 auto;

@@ -18,20 +18,22 @@
 </head>
 <body>
   <header>
-    <aside>
-      <img class="aside-ster" src="assets/img/ster.svg" alt="" width="130px">
-      <p>nog  <span class="countdown">70</span> nachtjes slapen tot het intertnationaal straatheater festival</p>
-    </aside>
-    <h1 class="logo-home">
-      <a href="index.php?page=home" class='logo-home'><img src="assets/img/logo-groot.svg" alt="" width=100px></a>
+
+<h1 class='logo-boven'>
+      <a href="index.php?page=home" class='logo-home'><img src="assets/img/logo-groot.svg" alt="" class="logo-foto" width="80px" height= "80px"></a>
       <p class="hidden">internationaal straattheater festival Beveren</p></h1>
     <nav>
-      <ul>
+      <ul class="navigatie">
         <li><a href="index.php?page=programma">programma</a></li>
         <li><a href="index.php?page=activiteiten">activiteiten</a></li>
-        <li><a href="index.php?page=praktisch">praktische info</a></li>
+        <li class="navigatie-praktisch"><a href="index.php?page=praktisch">praktische info</a></li>
       </ul>
     </nav>
+
+     <!-- <aside>
+      <img class="aside-ster" src="assets/img/ster.svg" alt="" width="80px">
+      <p>nog  <span class="countdown">70</span> nachtjes slapen tot het intertnationaal straatheater festival</p>
+    </aside> -->
     </header>
 
     <?php echo $content;?>

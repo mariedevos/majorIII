@@ -6,6 +6,8 @@
       <input type="radio" id="dag" name="dag" value="vrijdag">vrijdag
       <input type="radio" id="dag" name="dag" value="zaterdag">zaterdag
       <input type="radio" id="dag" name="dag" value="zondag">zondag
+      <input type="radio" id="type" name="type" value="straatact">act
+      <input type="radio" id="type" name="type" value="voorstelling">voorstelling
       <input type="submit" value="filter">
     </form>
   </section>

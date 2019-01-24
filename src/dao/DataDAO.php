@@ -17,7 +17,7 @@ class DataDAO extends DAO {
       $sql .= " AND data.dag LIKE :dag";
     }
     if(!empty($data['type'])){
-      $sql .= " AND data.type LIKE :type";
+      $sql .= " AND acts.type LIKE :type";
     }
     $stmt = $this->pdo->prepare($sql);
     if (!empty($data['dag'])){

@@ -1,0 +1,157 @@
+
+.hidden {
+  display: none;
+}
+
+header {
+  @media only screen and (min-width: 990px) {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-areas:
+    ' . logo nav';
+  }
+}
+
+.logo-home {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0;
+}
+
+.logo-boven {
+  @media only screen and (min-width: 990px) {
+    grid-area: logo;
+  }
+}
+
+.logo-foto {
+  @media only screen and (min-width: 990px) {
+    width: 8vw;
+    height: 8vw;
+  }
+}
+
+nav {
+  @media only screen and (min-width: 990px) {
+    grid-area: nav;
+  }
+}
+
+ul {
+  padding: 0;
+  line-height: 1.8rem;
+  list-style-type: none;
+
+  @media only screen and (max-width: 990px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    grid-template-areas:
+    ' nav nav prak';
+  }
+
+    @media only screen and (min-width: 990px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin-right: 9vw;
+  }
+}
+
+a {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+
+}
+
+.foto-home {
+  @media only screen and (max-width: 768px) {
+  height: 100vw;
+  object-fit: cover;
+  width:100vw;
+
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  }
+}
+
+.navigatie-praktisch {
+  @media only screen and (max-width: 320px) {
+    grid-area: prak;
+  }
+
+  @media only screen and (max-width: 990px) {
+    grid-area: prak;
+  }
+}
+
+li {
+ display: flex;
+ justify-content: center;
+
+ @media only screen and (max-width: 300px) {
+  font-size: 10px;
+}
+
+ @media only screen and (max-width: 990px){
+  font-size: 1.2rem;
+  border: 0.1px solid black;
+  padding: 0.8rem;
+  margin-left: 0.3rem;
+}
+
+@media only screen and (min-width: 990px){
+  font-size: 1.2rem;
+}
+
+}
+
+.voorstellingen-titel {
+  width: 30%;
+  line-height: 1.7rem;
+}
+
+.act-titel {
+  background-color: #613c6b;
+  position: absolute;
+  width:100vw;
+  color: white;
+}
+
+.act {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.button {
+background-color: #A0D1C6;
+padding: 1.1rem;
+display:flex;
+justify-content: center;
+margin: 0.8rem;
+color: white;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+blockquote {
+  font-family: 'baksosapi', Arial, Helvetica, sans-serif;
+  color: #D2513A;
+  font-size: 1rem;
+  margin: 0.5rem;
+  line-height: 1.5rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+h2{
+  font-family: 'alvania', Arial, Helvetica, sans-serif;
+  color: #613c6b;
+  font-size: 1.2rem;
+  margin-top: 4rem;
+  margin-left: 0.4rem;
+}

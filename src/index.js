@@ -1,4 +1,4 @@
-require('./style.css');
+require('./styles.css');
 {
   const $filterForm = document.querySelector(`.filter__form`),
     $acts = document.querySelector(`.players__list`);
