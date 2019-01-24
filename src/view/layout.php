@@ -19,7 +19,7 @@
 <body>
   <header>
     <aside>nog 70 nachtjes slapen tot het intertnationaal straatheater festival</aside>
-    <h1><a href="index.php?page=home">.</a><p class="hidden">internationaal straattheater festival Beveren</p></h1>
+    <h1 class="logo-boven"><a href="index.php?page=home">.</a><p class="hidden">internationaal straattheater festival Beveren</p></h1>
     <nav>
       <ul>
         <li><a href="index.php?page=programma">programma</a></li>
@@ -35,7 +35,8 @@
 
 
     <footer>
-      <h1><a href="index.php?page=home">.</a><p class="hidden">internationaal straattheater festival Beveren</p></h1>
+      <div class="footer-text">
+      <h1 class="logo-footer"><a href="index.php?page=home">.</a><p class="hidden">internationaal straattheater festival Beveren</p></h1>
       <h3>contact</h3>
       <div class="contact">
         <p>Dienst projectcoördinatie</p>
@@ -44,6 +45,7 @@
         <p>Stationstraat 2 - 9120 Beveren</p>
       </div>
 
+<div class="volg ons">
    <h3>volg ons</h3>
    <a href="">
    <img src="" alt="">facebook
@@ -51,6 +53,7 @@
    <a href="">
    <img src="" alt="">instagram
    </a>
+   </div>
 
    <h3>praktische info</h3>
    <div class="contact">
@@ -58,6 +61,7 @@
    <a href="">programma</a>
    <a href="">activiteiten</a>
    <a href="">praktische info</a>
+   </div>
    </div>
   </footer>
 </body>

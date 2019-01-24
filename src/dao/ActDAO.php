@@ -12,7 +12,7 @@ class ActDAO extends DAO {
   }
 
   public function selectAllLimit(){
-    $sql = "SELECT * FROM `acts` ORDER BY RAND() LIMIT 4;";
+    $sql = "SELECT * FROM `acts`  ORDER BY RAND() LIMIT 4;";
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);

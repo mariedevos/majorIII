@@ -46,7 +46,12 @@ aside {
   height: 300px;
   object-fit: cover;
   z-index: 1;
+}
 
+.foto-programma{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .act:nth-child(odd) {
@@ -67,7 +72,7 @@ aside {
   margin-bottom:2rem;
 }
 
-h1 {
+.logo-boven {
   background-image: url(assets/img/logo-groot.svg);
   background-repeat: no-repeat;
   width: 7rem;
@@ -113,7 +118,7 @@ ul {
 main {
   display: grid;
   grid-template-columns: 1.6fr 1.2fr 1.5fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 0.5fr;
   grid-gap: 3rem;
   margin: 3rem;
 
@@ -191,13 +196,20 @@ nav {
 }
 
 footer {
+
+  height: 15rem;
+  margin: 0 auto;
+  background-color: #F2F0ED;
+}
+
+.footer-text{
+  width: 80%;
+  height: 15rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
+  align-items: center;
   margin: 0 auto;
-  background-color: #F2F0ED;
-
 }
 
 .contact {
@@ -215,6 +227,12 @@ blockquote {
   display: grid;
   grid-template-columns: 30% 30% 30%;
   justify-content: center;
+  height: 1000px;
+
+}
+
+.programma-item{
+  margin: 3rem;
 }
 
 .foto {
@@ -222,4 +240,12 @@ margin: 0 auto;
 width: 250px;
   height: 250px;
   object-fit: cover;
+}
+
+.logo-footer {
+  background-image: url(assets/img/logo-groot.svg);
+  background-repeat: no-repeat;
+  width: 7rem;
+  height: 7rem;
+  margin-right: 4rem;
 }

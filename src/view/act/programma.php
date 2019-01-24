@@ -21,16 +21,15 @@
 <?php
   foreach($events as $event) {
     ?>
-
-      <li>
+      <li class='programma-item'>
       <!-- <img  class='foto' src="assets/img/<?php echo $d['foto'];?>.jpg" alt="" height="200px"> -->
       <div class='act'>
         <p><?php echo $event['locatie'];?></p>
-        <?php echo $event['uur'];?></p>
-        <!-- <a href="index.php?page=detail&amp;id=<?php echo $act['id']; ?>">detail</a> -->
+        <p><?php echo $event['uur'];?></p>
+        <img  class='foto-programma' src="assets/img/<?php echo $event['foto'];?>.jpg" alt="">
+        <a href="index.php?page=detail&amp;id=<?php echo $event['id']; ?>">detail</a>
         </div>
         </li>
-
     <?php
   }
 ?>

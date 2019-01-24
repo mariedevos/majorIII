@@ -16,6 +16,9 @@ class ActController extends Controller {
 
   public function index() {
     $acts = $this->ActDAO->selectAllLimit();
+
+// hier over je array lopen
+
     $this->set('acts', $acts);
   }
 
@@ -38,19 +41,19 @@ class ActController extends Controller {
 
   // }
 
-  // public function programma() {
-  //   $events = $this->DataDAO->selectById($id);
-  //   $this->set('events', $events);
-
-  // }
-
-
-
   public function programma() {
-    $events = $this->DataDAO->selectAll();
-    // $events = $this->ActDAO->selectById($id);
+    $events = $this->DataDAO->selectById();
     $this->set('events', $events);
+
   }
+
+
+
+  // public function programma() {
+  //   $events = $this->DataDAO->selectAll();
+  //   // $events = $this->ActDAO->selectById($id);
+  //   $this->set('events', $events);
+  // }
 
   public function detail() {
     $acts = $this->ActDAO->selectAll();
