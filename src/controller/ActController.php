@@ -22,31 +22,31 @@ class ActController extends Controller {
     $this->set('acts', $acts);
   }
 
-  // public function programma() {
-  //   // if (!empty($_GET['action']) && $_GET['action'] == 'filter') {
-  //   //   $acts = $this->ActDAO->search(25, $_GET['titel'], $_GET['type']);
-  //   //   $this->set('title', "acts for ". $_GET['titel']);
-  //   //   $this->set('titel',$_GET['titel']);
-  //   //   $this->set('type',$_GET['type']);
-  //   // }else{
-  //   //   $acts = $this->ActDAO->search();
-  //   //   $this->set('title', "Top 10");
-  //   //   $this->set('titel','');
-  //   //   $this->set('type','');
-  //   // }
-
-  //   $this->set('acts', $acts);
-  //   $events = $this->DataDAO->selectById();
-  //   $this->set('events', $events);
-
-  // }
-
   public function programma() {
-    $events = $this->DataDAO->selectById();
-    $this->set('events', $events);
+    // if (!empty($_GET['action']) && $_GET['action'] == 'filter') {
+    //   $events = $this->ActDAO->search($_GET['dag']);
+    //   $this->set('dag',$_GET['dag']);
+    // }else{
+    //   $events = $this->ActDAO->search();
+    //   $this->set('dag','');
+    // }
 
+    $this->filterSystem();
+
+    // $events = $this->DataDAO->selectAll();
+
+    // $this->set('events', $events);
   }
 
+  public function filterSystem(){
+    $data = array(
+      'dag'=> (!empty($_GET['dag'])) ? $_GET['dag'] : '',
+      'type'=> (!empty($_GET['type'])) ? $_GET['type'] : '',
+    );
+
+    $events=$this->DataDAO->selectAllByFilters($data);
+    $this->set('events', $events);
+  }
 
 
   // public function programma() {

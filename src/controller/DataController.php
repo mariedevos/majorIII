@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 require_once __DIR__ . '/Controller.php';
 require_once __DIR__ . '/../dao/DataDAO.php';
@@ -27,5 +27,4 @@ class DataController extends Controller {
     $data = $this->DataDAO->selectAll();
     $this->set('data', $data);
   }
-}
-
+} -->

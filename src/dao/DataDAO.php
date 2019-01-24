@@ -5,8 +5,27 @@ require_once( __DIR__ . '/DAO.php');
 class DataDAO extends DAO {
 
   public function selectAll(){
-    $sql = "SELECT * FROM `data`";
+    $sql = "SELECT * FROM `data` INNER JOIN `acts` ON `acts_id` = `id`";
     $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+  public function selectAllByFilters($data){
+    $sql = "SELECT `acts`.*, `data`.* FROM `data` INNER JOIN `acts` ON `acts_id` = `id` WHERE 1";
+    if (!empty ($data ['dag'])) {
+      $sql .= " AND data.dag LIKE :dag";
+    }
+    if(!empty($data['type'])){
+      $sql .= " AND data.type LIKE :type";
+    }
+    $stmt = $this->pdo->prepare($sql);
+    if (!empty($data['dag'])){
+      $stmt->bindValue(':dag', $data['dag']);
+    }
+    if (!empty($data['type'])){
+      $stmt->bindValue(':type', $data['type']);
+    }
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
@@ -18,6 +37,14 @@ class DataDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
+  public function selectDay(){
+    $sql = "SELECT * FROM `data` WHERE `dag`";
+  }
+
+  public function groupByType(){
+    $sql = "SELECT * FROM `data` GROUP BY `type`";
+  }
+
   // public function selectById($id){
   //   $sql = "SELECT * FROM `data` INNER JOIN `acts` ON `acts_id` = `id` WHERE `acts_id` = :id";
   //   $stmt = $this->pdo->prepare($sql);
@@ -25,5 +52,4 @@ class DataDAO extends DAO {
   //   $stmt->execute();
   //   return $stmt->fetchAll(PDO::FETCH_ASSOC);
   // }
-
 }

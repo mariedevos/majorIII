@@ -6,17 +6,21 @@
 }
 
 header{
-  @media (--xs) {
+  @media only screen and (max-width: 768px) {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-    'logo'
-    'nav'
+    ' logo '
+    ' nav '
     'aside';
     margin-top: 1rem;
+    align-content: center;
+    margin: 0 auto;
+
   }
 
-  @media (--md) {
+  /* @media (--md) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -26,15 +30,46 @@ header{
     width: 94%;
     margin: 0 auto;
     border-bottom: 0.1px solid lightgray;
-  }
+  } */
+
+}
+
+.countdown{
+  font-family: 'alvania', Arial, Helvetica, sans-serif;
+  color: #F9C553;
+
+}
+
+.aside-ster{
+  position: absolute;
+  z-index: 3;
+  margin-left: -7rem;
+  margin-top: -1rem;
+}
+
+aside:after{
+  content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #f2f0ed;
+    transform-origin: top left;
+    -ms-transform: skew(10deg, 0deg);
+    -webkit-transform: skew(10deg, 0deg);
+    transform: skew(10deg, 0deg);
 
 }
 
 aside {
+  line-height: 1.3rem;
+  position: relative;
   width: 18rem;
-  height: 5rem;
-  background-color: #f2f0ed;
   grid-area: aside;
+  padding-left: 5rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -72,14 +107,13 @@ aside {
   margin-bottom:2rem;
 }
 
-.logo-boven {
-  background-image: url(assets/img/logo-groot.svg);
-  background-repeat: no-repeat;
-  width: 7rem;
-  height: 7rem;
+.logo-home{
+
+
   grid-area: logo;
   margin: 0 auto;
 }
+
 
 h2 {
   font-family: 'alvania', Arial, Helvetica, sans-serif;
@@ -133,6 +167,14 @@ nav {
   align-content: center;
   margin: 0 auto;
   grid-area: nav;
+
+  @media only screen and (max-width: 768px) {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-self:stretch;
+
+  }
 }
 
 .act-home {

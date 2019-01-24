@@ -1,18 +1,12 @@
-<section class="filter">
-    <h2 class="filter__title">Filter</h2>
-    <form action="index.php" class="filter__form">
-    <input type="hidden" name="action" value="filter" />
-      <label for="term" class="form__label">
-        <span class="hidden">Search</span>
-        <input type="search" id="name" name="name" class="input input--filter" value="<?php echo $name;?>">
-        <select name="type">
-          <option value="">type:</option>
-        <?php foreach($acts as $act):?>
-          <option value="<?php echo $act['type'];?>" <?php if($type == $type['type']) echo 'selected';?>><?php echo $type['type'];?></option>
-        <?php endforeach;?>
-        </select>
-      </label>
-      <input type="submit" value="Filter" class="form__submit input input--button">
+
+  <section class="filter">
+    <h2></h2>
+    <form >
+    <input type="hidden" name="page" value="programma" />
+      <input type="radio" id="dag" name="dag" value="vrijdag">vrijdag
+      <input type="radio" id="dag" name="dag" value="zaterdag">zaterdag
+      <input type="radio" id="dag" name="dag" value="zondag">zondag
+      <input type="submit" value="filter">
     </form>
   </section>
 

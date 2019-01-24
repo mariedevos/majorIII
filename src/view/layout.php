@@ -18,8 +18,13 @@
 </head>
 <body>
   <header>
-    <aside>nog 70 nachtjes slapen tot het intertnationaal straatheater festival</aside>
-    <h1 class="logo-boven"><a href="index.php?page=home">.</a><p class="hidden">internationaal straattheater festival Beveren</p></h1>
+    <aside>
+      <img class="aside-ster" src="assets/img/ster.svg" alt="" width="130px">
+      <p>nog  <span class="countdown">70</span> nachtjes slapen tot het intertnationaal straatheater festival</p>
+    </aside>
+    <h1 class="logo-home">
+      <a href="index.php?page=home" class='logo-home'><img src="assets/img/logo-groot.svg" alt="" width=100px></a>
+      <p class="hidden">internationaal straattheater festival Beveren</p></h1>
     <nav>
       <ul>
         <li><a href="index.php?page=programma">programma</a></li>

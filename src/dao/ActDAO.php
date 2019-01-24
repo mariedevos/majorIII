@@ -20,20 +20,12 @@ class ActDAO extends DAO {
 
 
 
-
-
-
-  public function search($max=10, $titel = '', $type = ''){
+  public function search($max=10, $dag = ''){
     $sql = "SELECT * FROM `acts` WHERE 1";
 
-    if (!empty($titel)) {
-      $sql .= " AND `titel` LIKE :titel";
+    if (!empty($dag)) {
+      $sql .= " AND `dag` LIKE :dag";
     }
-    if (!empty($type)) {
-      $sql .= " AND `type` = :type";
-    }
-
-    // $sql .= " ORDER BY `Overall` DESC LIMIT :max";
 
     $stmt = $this->pdo->prepare($sql);
     if (!empty($titel)) {
