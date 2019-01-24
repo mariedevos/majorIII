@@ -33,6 +33,17 @@ header {
 }
 
 nav {
+  @media only screen and (min-width: 0) {
+    margin: 2px;
+
+  }
+
+  @media only screen and (max-width: 768px) {
+    grid-area: nav;
+    margin: 2px;
+
+  }
+
   @media only screen and (min-width: 990px) {
     grid-area: nav;
   }
@@ -42,6 +53,16 @@ ul {
   padding: 0;
   line-height: 1.8rem;
   list-style-type: none;
+
+  /* @media only screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    grid-template-areas:
+    ' nav nav'
+    ' prak prak';
+  } */
 
   @media only screen and (max-width: 990px) {
     display: grid;
@@ -77,25 +98,42 @@ a {
   justify-content: center;
   align-items:center;
   }
+
+  @media only screen and (min-width: 768px) {
+    height: 45vw;
+    object-fit: cover;
+    width:35vw;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+    }
 }
 
-.navigatie-praktisch {
-  @media only screen and (max-width: 320px) {
+.act:nth-child(even) {
+  @media only screen and (min-width: 768px) {
+    margin-top: -5rem;
+    }
+}
+
+/* .navigatie-praktisch {
+  @media only screen and (max-width: 768px) {
     grid-area: prak;
   }
 
   @media only screen and (max-width: 990px) {
     grid-area: prak;
   }
-}
+} */
 
 li {
  display: flex;
  justify-content: center;
 
- @media only screen and (max-width: 300px) {
+ /* @media only screen and (max-width: 300px) {
   font-size: 10px;
-}
+} */
 
  @media only screen and (max-width: 990px){
   font-size: 1.2rem;
@@ -113,6 +151,15 @@ li {
 .voorstellingen-titel {
   width: 30%;
   line-height: 1.7rem;
+
+
+}
+
+.voorstellingen{
+
+  @media only screen and (min-width: 768px) {
+    margin: 3rem;
+    }
 }
 
 .act-titel {
@@ -120,6 +167,8 @@ li {
   position: absolute;
   width:100vw;
   color: white;
+
+
 }
 
 .act {
@@ -127,15 +176,40 @@ li {
   margin-bottom: 2rem;
 }
 
+.act-home{
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    }
+}
+
 .button {
-background-color: #A0D1C6;
+  position: relative;
+
 padding: 1.1rem;
 display:flex;
 justify-content: center;
 margin: 0.8rem;
 color: white;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
+.button:after{
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #A0D1C6;
+  transform-origin: top left;
+  -ms-transform: skew(0deg, 0deg);
+  -webkit-transform: skew(10deg, 0deg);
+  transform: skew(10deg, 0deg);
 }
 
 blockquote {
@@ -154,4 +228,9 @@ h2{
   font-size: 1.2rem;
   margin-top: 4rem;
   margin-left: 0.4rem;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 1.4rem;
+    line-height: 1rem;
+    }
 }

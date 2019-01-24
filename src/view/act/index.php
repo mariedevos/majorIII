@@ -4,10 +4,10 @@
       <div class='act-home'>
         <?php foreach($acts as $act){ ?>
           <article class="act">
-            <div class="act-titel">
+            <!-- <div class="act-titel">
               <h3><?php echo $act["titel"];?></h3>
               <h4><?php echo $act["artiest"];?></h4>
-            </div>
+            </div> -->
             <img  class='foto-home' src="assets/img/<?php echo $act['foto'];?>.jpg" alt="">
           </article>
           <?php } ?>

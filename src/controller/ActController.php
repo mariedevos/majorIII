@@ -23,19 +23,7 @@ class ActController extends Controller {
   }
 
   public function programma() {
-    // if (!empty($_GET['action']) && $_GET['action'] == 'filter') {
-    //   $events = $this->ActDAO->search($_GET['dag']);
-    //   $this->set('dag',$_GET['dag']);
-    // }else{
-    //   $events = $this->ActDAO->search();
-    //   $this->set('dag','');
-    // }
-
     $this->filterSystem();
-
-    // $events = $this->DataDAO->selectAll();
-
-    // $this->set('events', $events);
   }
 
   public function filterSystem(){
@@ -48,12 +36,6 @@ class ActController extends Controller {
     $this->set('events', $events);
   }
 
-
-  // public function programma() {
-  //   $events = $this->DataDAO->selectAll();
-  //   // $events = $this->ActDAO->selectById($id);
-  //   $this->set('events', $events);
-  // }
 
   public function detail() {
     $acts = $this->ActDAO->selectAll();
