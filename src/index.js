@@ -1,52 +1,59 @@
 require('./styles.css');
-{
-  const $filterForm = document.querySelector(`.filter__form`),
-    $acts = document.querySelector(`.players__list`);
+// {
+//   const $filterForm = document.querySelector(`.form`),
+//     $acts = document.querySelector(`.programma`);
 
-  const init = () => {
-    if ($filterForm) {
-      $filterForm.addEventListener(`submit`, handleSubmitFilterForm);
-    }
-  };
+//   const init = () => {
+//     if ($filterForm) {
+//       $filterForm.addEventListener(`submit`, handleSubmitFilterForm);
+//     }
+//   };
 
-  const handleLoadPlayers = data => {
-    $acts.innerHTML = data
-      .map(player => createPlayerListItem(player))
-      .join(``);
-  };
+//   const handleLoadPlayers = data => {
+//     console.log(data);
+//     const $programma = document.querySelector('.programma');
+//     $programma.innerHTML = ``;
+//     for (const property in data) {
+//       if (data.hasOwnProperty(property)) {
+//         // Do things here
+//         const $li = createPlayerListItem(data[property]);
+//         $programma.appendChild($li);
+//       }
+//     }
 
-  const createPlayerListItem = player => {
-    return ` <li class='player'>
-    <img src="${player['Photo'].replace('/4/', '/10/')}" alt="Profile picture ${
-  player['Name']
-}" class="player__pic">
-    <span class='player__name'>${player['Name']}</span>
-    <span class='player__stat'>${player['Age']} ${player['Nationality']}</span>
-    <span class='player__info'>${player['Club']}</span>
-    <span class='player__more'>more</span>
-</li>`;
-  };
+//     // $acts.innerHTML = data
+//     //   .map(events => createPlayerListItem(events))
+//     //   .join(``);
+//   };
 
-  const handleSubmitFilterForm = e => {
-    console.log('submit');
-    e.preventDefault();
-    const qs = new URLSearchParams([
-      ...new FormData($filterForm).entries()
-    ]).toString();
-    fetch(`${$filterForm.getAttribute('action')}?${qs}`, {
-      headers: new Headers({
-        Accept: `application/json`
-      }),
-      method: 'get'
-    })
-      .then(r => r.json())
-      .then(data => handleLoadPlayers(data));
-    window.history.pushState(
-      {},
-      '',
-      `${window.location.href.split('?')[0]}?${qs}`
-    );
-  };
+//   const createPlayerListItem = events => {
+//     const $li = document.createElement('li');
+//     $li.innerHTML =  `
+//       <img  class='foto' src="assets/img/<?php echo ${events['foto']}.jpg" alt="" height="200px">
+//     >`;
+//     return $li;
+//   };
 
-  init();
-}
+//   const handleSubmitFilterForm = e => {
+//     console.log('submit');
+//     e.preventDefault();
+//     const qs = new URLSearchParams([
+//       ...new FormData($filterForm).entries()
+//     ]).toString();
+//     fetch(`${$filterForm.getAttribute('action')}?${qs}`, {
+//       headers: new Headers({
+//         Accept: `application/json`
+//       }),
+//       method: 'get'
+//     })
+//       .then(r => r.json())
+//       .then(data => handleLoadPlayers(data));
+//     window.history.pushState(
+//       {},
+//       '',
+//       `${window.location.href.split('?')[0]}?${qs}`
+//     );
+//   };
+
+//   init();
+// }

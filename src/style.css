@@ -164,6 +164,7 @@ main {
   grid-template-rows: 1fr 1fr 0.5fr;
   grid-gap: 3rem;
   margin: 3rem;
+  width: 100vw;
 
   grid-template-areas:
     'voorstellingen familiedag quote'
@@ -245,7 +246,6 @@ nav {
 }
 
 footer {
-
   height: 15rem;
   margin: 0 auto;
   background-color: #F2F0ED;

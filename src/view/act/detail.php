@@ -1,1 +1,1 @@
-<p><?php echo $acts['url'];?></p>
+<p><?php echo $detailAct['id'];?></p>

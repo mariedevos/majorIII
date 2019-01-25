@@ -1,14 +1,15 @@
   <main>
+
     <section class="voorstellingen">
       <h2 class="voorstellingen-titel ">uitgelichte voorstellingen</h2>
       <div class='act-home'>
         <?php foreach($acts as $act){ ?>
           <article class="act">
-            <!-- <div class="act-titel">
-              <h3><?php echo $act["titel"];?></h3>
-              <h4><?php echo $act["artiest"];?></h4>
-            </div> -->
-            <img  class='foto-home' src="assets/img/<?php echo $act['foto'];?>.jpg" alt="">
+          <img  class='foto-home' src="assets/img/<?php echo $act['foto'];?>.jpg" alt="">
+            <div class="act-titel">
+              <h3 class="act-h3"><?php echo $act["titel"];?>!</h3>
+              <h4 class="act-h4"><?php echo $act["artiest"];?>'</h4>
+            </div>
           </article>
           <?php } ?>
           </div>
@@ -33,9 +34,11 @@
 
   <section class="info">
     <h2>praktische info</h2>
-    <a class="button" href="index.php?page=programma"> toegankelijkheid  &rtrif; </a>
+    <a class="button info_button" href="index.php?page=programma"> toegankelijkheid  &rtrif; </a>
     <a class="button" href="index.php?page=programma"> word vrijwilliger  &rtrif; </a>
   </section>
 
+
+  </div>
   </main>
 

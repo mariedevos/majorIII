@@ -11,8 +11,22 @@ class ActDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
+
   public function selectAllLimit(){
     $sql = "SELECT * FROM `acts`  ORDER BY RAND() LIMIT 4;";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // $act = $stmt->fetchAll(PDO::FETCH_ASSOC)
+    // ophaaldeData = data voor act_id ophalen
+    // data toevoegen aan $act['data']=ophaaldeData
+    // return act
+    // return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+  public function selectTimes(){
+    $sql = "SELECT  * FROM `data`";
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -21,7 +35,7 @@ class ActDAO extends DAO {
 
 
   public function search($max=10, $dag = ''){
-    $sql = "SELECT * FROM `acts` WHERE 1";
+    $sql = "SELECT  * FROM `acts` WHERE 1";
 
     if (!empty($dag)) {
       $sql .= " AND `dag` LIKE :dag";

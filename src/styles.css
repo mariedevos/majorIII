@@ -8,9 +8,73 @@ header {
     display: grid;
     grid-template-columns: 1fr 0.5fr 1fr;
     grid-template-areas:
-    ' . logo nav';
+    ' aside logo nav';
   }
 }
+
+body{
+  margin:0;
+}
+
+.container{
+  /* @media only screen and (min-width: 990px) {
+    display: grid;
+    grid-template-columns: 33vw 33vw 33vw;
+  } */
+}
+
+main{
+  @media only screen and (min-width: 990px){
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10vw 30vw 20vw 20vw;
+
+    grid-template-areas:
+    'voorstellingen familie quote'
+    'voorstellingen familie activiteit'
+    'voorstellingen kaart kaart'
+    'praktisch kaart kaart'
+  }
+
+
+}
+
+.kaart{
+  grid-area: kaart;
+}
+
+.aside-ster{
+  margin-top: -1rem;
+  margin-left: -6.5rem;
+  position: relative;
+}
+
+aside{
+  line-height: 1.3rem;
+  position: relative;
+  width: 12rem;
+  grid-area: aside;
+  padding-left: 6rem;
+  margin-right: 1rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background-color: #f2f0ed;
+
+  @media only screen and (min-width: 990px) {
+    grid-area: aside;
+    height: 8.3rem;
+    width: 22rem;
+    margin-top: 2rem;
+  }
+}
+
+.aside-text{
+  @media only screen and (max-width: 320px) {
+    width: 10rem;
+  }
+}
+
 
 .logo-home {
   display: flex;
@@ -34,7 +98,7 @@ header {
 
 nav {
   @media only screen and (min-width: 0) {
-    margin: 2px;
+    padding-right: 0.4rem;
 
   }
 
@@ -85,30 +149,41 @@ ul {
 a {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: black;
+}
+
+p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 
+h3{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+}
+
 .foto-home {
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 320px) {
   height: 100vw;
   object-fit: cover;
   width:100vw;
-
-  display:flex;
-  justify-content: center;
-  align-items:center;
   }
 
   @media only screen and (min-width: 768px) {
     height: 45vw;
     object-fit: cover;
     width:35vw;
-
     display:flex;
     justify-content: center;
     align-items:center;
-
     }
+
+    @media only screen and (min-width: 990px) {
+      height: 15vw;
+      object-fit: cover;
+      width:15vw;
+      }
+
+
 }
 
 .act:nth-child(even) {
@@ -117,23 +192,11 @@ a {
     }
 }
 
-/* .navigatie-praktisch {
-  @media only screen and (max-width: 768px) {
-    grid-area: prak;
-  }
-
-  @media only screen and (max-width: 990px) {
-    grid-area: prak;
-  }
-} */
-
 li {
  display: flex;
  justify-content: center;
 
- /* @media only screen and (max-width: 300px) {
-  font-size: 10px;
-} */
+
 
  @media only screen and (max-width: 990px){
   font-size: 1.2rem;
@@ -156,61 +219,97 @@ li {
 }
 
 .voorstellingen{
-
+  grid-area: voorstellingen;
   @media only screen and (min-width: 768px) {
-    margin: 3rem;
+    margin-left: 5.5rem;
+    padding-bottom: 3rem;
+    border-bottom: 0.1px solid lightgray;
     }
+
+
+/*
+    @media only screen and (min-width: 990px){
+     grid-area: voorstellingen;
+    } */
+
+
 }
 
 .act-titel {
   background-color: #613c6b;
-  position: absolute;
-  width:100vw;
   color: white;
+  position: absolute;
+  margin-top: -6rem;
 
+  @media only screen and (max-width: 768px) {
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    flex-order:
+    /* flex-flow + order */
+    }
+
+  @media only screen and (min-width: 768px) {
+  width: 35%;
+    }
+
+    @media only screen and (min-width: 990px) {
+      width: 15%;
+        }
+}
+
+.act-h3, .act-h4{
+margin-left: 2rem;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight: 400;
+font-size: 1.1rem;
 
 }
 
 .act {
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+
 }
 
 .act-home{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+  margin:0;
   @media only screen and (min-width: 768px) {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-
     }
+
+  @media only screen and (min-width: 990px) {
+
+}
 }
 
 .button {
   position: relative;
+  padding: 1.1rem;
+  margin: 0.5rem;
+  display:flex;
+  justify-content: center;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #A0D1C6;
 
-padding: 1.1rem;
-display:flex;
-justify-content: center;
-margin: 0.8rem;
-color: white;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  @media only screen and (min-width: 768px) {
+    width: 50%;
+    }
 }
 
-.button:after{
-  content: " ";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background: #A0D1C6;
-  transform-origin: top left;
-  -ms-transform: skew(0deg, 0deg);
-  -webkit-transform: skew(10deg, 0deg);
-  transform: skew(10deg, 0deg);
+.info_button{
+  margin-bottom: 1rem;
 }
+
 
 blockquote {
   font-family: 'baksosapi', Arial, Helvetica, sans-serif;
@@ -220,6 +319,7 @@ blockquote {
   line-height: 1.5rem;
   margin-top: 4rem;
   text-align: center;
+  grid-area: quote;
 }
 
 h2{
@@ -233,4 +333,34 @@ h2{
     font-size: 1.4rem;
     line-height: 1rem;
     }
+}
+
+.tablet-grid{
+  /* @media only screen and (min-width: 768px) {
+    display:flex;
+    flex-direction:column;
+    } */
+
+  @media only screen and (max-width: 768px) {
+    display:grid;
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows: 0.5fr 1.5fr 1fr;
+    grid-gap: 2rem;
+    justify-content:center;
+
+    grid-template-areas:
+    ' familie quote '
+    ' familie activiteit '
+    ' info kaart '
+    }
+}
+
+.familiedag{
+  grid-area: familie;
+}
+
+footer{
+  background-color: #f2f0ed;
+  margin-top:3rem;
+  padding: 1.5rem;
 }

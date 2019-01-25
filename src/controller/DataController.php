@@ -11,11 +11,11 @@ class DataController extends Controller {
     $this->DataDAO = new DataDAO();
   }
 
-  public function index() {
-    $data = $this->DataDAO->selectById($id);
-    exit();
-    $this->set('data', $data);
-}
+//   public function index() {
+//     $data = $this->DataDAO->selectById($id);
+//     exit();
+//     $this->set('data', $data);
+// }
 
   public function programma() {
     $data = $this->DataDAO->selectById($id);
@@ -23,8 +23,13 @@ class DataController extends Controller {
 
   }
 
-  public function detail() {
-    $data = $this->DataDAO->selectAll();
-    $this->set('data', $data);
-  }
-} -->
+  // public function detail() {
+  //   if(empty($_GET['id']) || !$events = $this->DataDAO->selectById($_GET['id'])){
+  //     $_SESSION['error']= 'dit product bestaat niet';
+  //     header('Location:index.php');
+  //     exit();
+  //   }
+  //   $this->set('events', $events);
+  // }
+
+}

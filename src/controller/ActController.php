@@ -23,22 +23,57 @@ class ActController extends Controller {
   }
 
   public function programma() {
-    $this->filterSystem();
-  }
-
-  public function filterSystem(){
     $data = array(
       'dag'=> (!empty($_GET['dag'])) ? $_GET['dag'] : '',
       'type'=> (!empty($_GET['type'])) ? $_GET['type'] : '',
     );
 
     $events=$this->DataDAO->selectAllByFilters($data);
+
+    $times = $this->ActDAO->selectTimes();
+    $this->set('times', $times);
+
+
+    if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
+
+      header('Content-Type: application/json');
+      echo json_encode($events);
+      exit();
+    }
+
     $this->set('events', $events);
   }
 
+  // public function filterSystem(){
+  //   $data = array(
+  //     'dag'=> (!empty($_GET['dag'])) ? $_GET['dag'] : '',
+  //     'type'=> (!empty($_GET['type'])) ? $_GET['type'] : '',
+  //   );
+
+  //   $events=$this->DataDAO->selectAllByFilters($data);
+  //   // foreach events, daarbinnen naar database om de acts ophalen die bij dat event horen -> velden toevoegen met de timing die erin zit
+  //   // met [] toevoegen (opzoeken) =>
+  // }
+
+
+  // public function detail() {
+  //   $acts = $this->ActDAO->selectById($id);
+  //   var_dump($acts);
+  //   // select id, id=1,
+  //   $this->set('acts', $acts);
+  // }
 
   public function detail() {
-    $acts = $this->ActDAO->selectAll();
-    $this->set('acts', $acts);
+    if(empty($_GET['id']) || !$events = $this->DataDAO->selectById($_GET['id'])){
+      $_SESSION['error']= 'dit product bestaat niet';
+      header('Location:index.php');
+      exit();
+    }
+    if(!empty($_GET['id'])){
+      $detailAct = $this->DataDAO->selectById($_GET['id']);
+    }
+    $this->set('detailAct', $detailAct);
   }
+
+
 }

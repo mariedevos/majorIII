@@ -30,10 +30,10 @@
       </ul>
     </nav>
 
-     <!-- <aside>
-      <img class="aside-ster" src="assets/img/ster.svg" alt="" width="80px">
-      <p>nog  <span class="countdown">70</span> nachtjes slapen tot het intertnationaal straatheater festival</p>
-    </aside> -->
+     <aside>
+      <img class="aside-ster" src="assets/img/ster.svg" alt="" width="100px">
+      <p class='aside-text'>nog <span class="countdown">70</span> nachtjes slapen tot het intertnationaal straatheater festival</p>
+    </aside>
     </header>
 
     <?php echo $content;?>
@@ -43,7 +43,7 @@
 
     <footer>
       <div class="footer-text">
-      <h1 class="logo-footer"><a href="index.php?page=home">.</a><p class="hidden">internationaal straattheater festival Beveren</p></h1>
+      <h1 class="logo-footer"><p class="hidden">internationaal straattheater festival Beveren</p><img src="assets/img/logo-groot.svg" width="100rem" alt=""></h1>
       <h3>contact</h3>
       <div class="contact">
         <p>Dienst projectcoördinatie</p>
