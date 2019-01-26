@@ -67,6 +67,8 @@ main{
 
 .kaart{
   grid-area: kaart;
+  border-bottom: 0.1px solid lightgray;
+  padding-bottom: 3rem;
 }
 
 .aside-ster{
@@ -199,7 +201,7 @@ p{
 
 h3{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .foto-home {
@@ -255,12 +257,18 @@ li {
 .voorstellingen-titel {
   width: 30%;
   line-height: 1.7rem;
-
+  @media only screen and (min-width: 320px) {
+    margin-left:1rem;
+    line-height: 2.3rem;
+    font-size:1.5rem;
+    margin-bottom:-1rem;
+    }
 
 }
 
 .voorstellingen{
   grid-area: voorstellingen;
+
   @media only screen and (min-width: 768px) {
     margin-left: 5.5rem;
     padding-bottom: 3rem;
@@ -283,12 +291,13 @@ li {
   margin-top: -6rem;
 
   @media only screen and (max-width: 768px) {
+    height: 33vw;
     width: 100vw;
-
     }
 
   @media only screen and (min-width: 768px) {
   width: 35%;
+  height: 13vw;
     }
 
     @media only screen and (min-width: 990px) {
@@ -296,22 +305,46 @@ li {
         }
 }
 
+.act-h3{
+  margin-top: 1.3rem;
 
-
-.act-h3, .act-h4{
 margin-left: 2rem;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-family: 'alvania', Arial, Helvetica, sans-serif;
 font-weight: 400;
 font-size: 1.1rem;
+margin-bottom: -1rem;
+}
+
+.act-h4{
+  margin-left: 2rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: 'alvania', Arial, Helvetica, sans-serif;
 
 
 }
 
 .act {
   width: 100%;
-  margin-bottom: 3rem;
-
+  margin-top: 4rem;
 }
+
+/* .dag{
+  margin-left: 2rem;
+  position: relative;
+  margin-left: 2rem;
+}
+
+.dag:before{
+  content:"";
+  position: absolute;
+  background-image: url(assets/img/kalender.svg);
+  background-repeat: no-repeat;
+  width: 1rem;
+  height: 1rem;
+
+
+} */
 
 .act-home{
   display:flex;
@@ -332,20 +365,61 @@ font-size: 1.1rem;
 }
 }
 
-.button {
+.button{
+  background-color: #A0D1C6;
+  color: white;
+  font-family: 'baksosapi', Arial, Helvetica, sans-serif;
+  padding: 1.1rem;
+  text-decoration: none;
+}
+
+.button__programma{
+  @media only screen and (min-width: 320px) {
+    width: 70%;
+    margin: 0 auto;
+    display:flex;
+    justify-content: center;
+    margin-top:10vw;
+    font-size: 4.5vw;
+    margin-top:10vw;
+    }
+
+    @media only screen and (min-width: 380px) {
+      margin-top:22vw;
+      font-size: 17px;
+      }
+}
+
+/* .button {
   position: relative;
   padding: 1.1rem;
-  margin: 0.5rem;
+
   display:flex;
   justify-content: center;
   color: white;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'baksosapi', Arial, Helvetica, sans-serif;
+
+  text-decoration: none;
+  margin-top: 0.5rem;
   background-color: #A0D1C6;
+
+  @media only screen and (min-width: 320px) {
+    width: 70%;
+    margin: 0 auto;
+    margin-top:10vw;
+    font-size: 4.5vw;
+    }
+
+
+  @media only screen and (min-width: 450px) {
+    margin-top:20vw;
+    font-size: 20px;
+    }
 
   @media only screen and (min-width: 768px) {
     width: 50%;
     }
-}
+} */
 
 .info_button{
   margin-bottom: 1rem;
@@ -356,12 +430,15 @@ blockquote {
   grid-area: quote;
   font-family: 'baksosapi', Arial, Helvetica, sans-serif;
   color: #D2513A;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0.5rem;
   line-height: 1.5rem;
   margin-top: 4rem;
   text-align: center;
-
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  border-bottom: 0.1px solid lightgray;
+  border-top: 0.1px solid lightgray;
 }
 
 h2{
@@ -370,6 +447,12 @@ h2{
   font-size: 1.2rem;
   margin-top: 4rem;
   margin-left: 0.4rem;
+
+  @media only screen and (min-width: 320px) {
+    margin-left:1rem;
+    line-height: 2.3rem;
+    font-size:1.5rem;
+    }
 
   @media only screen and (min-width: 768px) {
     font-size: 1.4rem;
@@ -397,16 +480,47 @@ h2{
     }
 }
 
-.familiedag{
+.familiedag {
   grid-area: familie;
 }
 
-.info{
-  grid-area: info;
+.countdown {
+  font-family: 'alvania', Arial, Helvetica, sans-serif;
+  color: #F9C553;
 }
+
+.familiedag-text {
+  margin-left: 3rem;
+  width: 70vw;
+  border-left: 3px solid #008C85;
+  padding-left: 1rem;
+}
+
+.info {
+  grid-area: info;
+  display:flex;
+  flex-direction: column;
+
+  @media only screen and (min-width:320px){
+    width: 70vw;
+    margin: 0 auto;
+  }
+
+}
+
+
 
 footer{
   background-color: #f2f0ed;
   margin-top:3rem;
   padding: 1.5rem;
+}
+
+.contact{
+  line-height:0.5rem;
+}
+
+.facebook{
+  background-image:url(assets/img/facebook.svg);
+  width: 10rem;
 }

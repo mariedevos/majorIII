@@ -7,20 +7,20 @@
           <article class="act">
           <img  class='foto-home' src="assets/img/<?php echo $act['foto'];?>.jpg" alt="">
             <div class="act-titel">
-              <h3 class="act-h3"><?php echo $act["titel"];?>!</h3>
-              <h4 class="act-h4"><?php echo $act["artiest"];?>'</h4>
+              <h3 class="act-h3"><?php echo $act["titel"];?></h3>
+              <h4 class="act-h4"><?php echo $act["artiest"];?></h4>
             </div>
           </article>
           <?php } ?>
           </div>
-          <a class="button" href="index.php?page=programma">ontdek de voorstellingen  &rtrif; </a>
+          <a class="button button__programma" href="index.php?page=programma">ontdek de voorstellingen  &rtrif; </a>
       </section>
 
   <section class="familiedag">
   <h2>zaterdag familiedag</h2>
   <img src="" alt="">
   <p class="familiedag-text">Op zaterdag organiseert het internationaal straattheater festival Beveren een Speciale familie dag. Op deze dag zijn er speciale acts en voorstellingen geschikt voor het gezin! </p>
-  <a class="button" href="index.php?page=programma">ontdek de voorstellingen  &rtrif; </a>
+  <a class="button button__programma" href="index.php?page=programma">ontdek de voorstellingen  &rtrif; </a>
   </section>
 
   <section class="quote">

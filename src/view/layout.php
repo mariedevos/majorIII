@@ -55,10 +55,11 @@
 <div class="volg ons">
    <h3>volg ons</h3>
    <a href="">
-   <img src="" alt="">facebook
+   <img src="assets/img/facebook.svg" width="40px" alt=""><span class="hidden">facebook</span>
    </a>
+
    <a href="">
-   <img src="" alt="">instagram
+   <img src="assets/img/instagram.svg" width="40px" alt=""><span class="hidden">instagram</span>
    </a>
    </div>
 
