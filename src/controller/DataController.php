@@ -20,7 +20,6 @@ class DataController extends Controller {
   public function programma() {
     $data = $this->DataDAO->selectById($id);
     $this->set('data', $data);
-
   }
 
   // public function detail() {

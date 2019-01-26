@@ -24,9 +24,9 @@
       <p class="hidden">internationaal straattheater festival Beveren</p></h1>
     <nav>
       <ul class="navigatie">
-        <li><a href="index.php?page=programma">programma</a></li>
-        <li><a href="index.php?page=activiteiten">activiteiten</a></li>
-        <li class="navigatie-praktisch"><a href="index.php?page=praktisch">info</a></li>
+        <li class="navigatie__items"><a href="index.php?page=programma">programma</a></li>
+        <li class="navigatie__items"><a href="index.php?page=activiteiten">activiteiten</a></li>
+        <li class="navigatie-praktisch navigatie__items"><a href="index.php?page=praktisch">info</a></li>
       </ul>
     </nav>
 

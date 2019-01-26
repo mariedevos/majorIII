@@ -13,14 +13,14 @@
           </article>
           <?php } ?>
           </div>
-          <a class="button button__programma" href="index.php?page=programma">ontdek de voorstellingen  &rtrif; </a>
+          <a class="button button__programma " href="index.php?page=programma">ontdek de voorstellingen  &rtrif; </a>
       </section>
 
   <section class="familiedag">
-  <h2>zaterdag familiedag</h2>
-  <img src="" alt="">
+  <h2 class="familiedag__titel">zaterdag familiedag</h2>
+  <img src="assets/img/familiedag.svg" alt="">
   <p class="familiedag-text">Op zaterdag organiseert het internationaal straattheater festival Beveren een Speciale familie dag. Op deze dag zijn er speciale acts en voorstellingen geschikt voor het gezin! </p>
-  <a class="button button__programma" href="index.php?page=programma">ontdek de voorstellingen  &rtrif; </a>
+  <a class="button button__programma button__familiedag" href="index.php?page=programma">ontdek de voorstellingen  &rtrif; </a>
   </section>
 
   <section class="quote">

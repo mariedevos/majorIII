@@ -30,8 +30,6 @@ class ActController extends Controller {
 
     $events=$this->DataDAO->selectAllByFilters($data);
 
-    $times = $this->ActDAO->selectTimes();
-    $this->set('times', $times);
 
 
     if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
@@ -40,8 +38,9 @@ class ActController extends Controller {
       echo json_encode($events);
       exit();
     }
-
     $this->set('events', $events);
+    $times = $this->ActDAO->selectTimes();
+    $this->set('times', $times);
   }
 
   // public function filterSystem(){
@@ -73,6 +72,18 @@ class ActController extends Controller {
       $detailAct = $this->DataDAO->selectById($_GET['id']);
     }
     $this->set('detailAct', $detailAct);
+
+    if(empty($_GET['id']) || !$events = $this->DataDAO->selectByData($_GET['id'])){
+      $_SESSION['error']= 'dit product bestaat niet';
+      header('Location:index.php');
+      exit();
+    }
+    if(!empty($_GET['id'])){
+      $detailActData = $this->DataDAO->selectByData($_GET['id']);
+    }
+    $this->set('detailActData', $detailActData);
+
+
   }
 
 

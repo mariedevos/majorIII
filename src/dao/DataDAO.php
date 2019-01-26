@@ -28,6 +28,14 @@ class DataDAO extends DAO {
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
+  public function selectByData($id){
+    $sql = "SELECT * FROM `data` WHERE `acts_id` = :id";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':id', $id);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
   public function selectAllByFilters($data){
     $sql = "SELECT `acts`.*, `data`.* FROM `data` INNER JOIN `acts` ON `acts_id` = `id`  WHERE 1";
     if (!empty ($data ['dag'])) {
