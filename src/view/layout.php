@@ -20,7 +20,7 @@
   <header>
 
 <h1 class='logo-boven'>
-      <a href="index.php?page=home" class='logo-home'><img src="assets/img/logo-groot.svg" alt="" class="logo-foto" width="80px" height= "80px"></a>
+      <a href="index.php?page=home" class='logo-home'><img src="assets/img/logo-groot.svg" alt="" class="logo-foto" width="100px" height= "100px"></a>
       <p class="hidden">internationaal straattheater festival Beveren</p></h1>
     <nav>
       <ul class="navigatie">
@@ -32,7 +32,7 @@
 
      <aside>
       <img class="aside-ster" src="assets/img/ster.svg" alt="" width="100px">
-      <p class='aside-text'>nog <span class="countdown">70</span> nachtjes slapen tot het intertnationaal straatheater festival</p>
+      <p class='aside-text'>nog <span class="countdown" id="demo"></span> nachtjes slapen tot het intertnationaal straatheater festival</p>
     </aside>
     </header>
 
