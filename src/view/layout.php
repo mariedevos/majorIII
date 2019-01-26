@@ -5,12 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script>
-  WebFont.load({
+  WebFontConfig = {
     custom: {
       families: ["baksosapi", "alvania"],
-      urls: ["assets/font/fonts.css"]
+      urls: ["assets/font/font.css"]
     }
-  });
+  };
+
+  (function(d) {
+    var wf = d.createElement("script"),
+    s= d.scripts[0];
+    wf.src = "js/webfont.js"
+    wf.async = true;
+    s.parentNode.insertBefore(wf, s);
+  })(document);
+
+
   </script>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>major III</title>
