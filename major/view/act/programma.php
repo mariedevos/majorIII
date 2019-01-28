@@ -1,6 +1,6 @@
 
   <section class="filter">
-    <h2></h2>
+    <h2 class="filter__titel">programma</h2>
     <form action="index.php" method="get" class="form" >
     <input type="hidden" name="page" value="programma" />
     <div class="onder">
@@ -27,17 +27,17 @@
 
     <div class="filter__type">
 
-    <input  class="hidden"  type="radio" id="type_straatact" name="type" value="straatact">
+    <input  class="hidden "  type="radio" id="type_straatact" name="type" value="straatact">
     <label class="type" for="type_straatact">straatact
-    <span class="circle"></span>
+    <span class="circle try"></span>
     </label>
-    <input  class="hidden"  type="radio" id="type_voorstelling" name="type" value="voorstelling">
+    <input  class="hidden "  type="radio" id="type_voorstelling" name="type" value="voorstelling">
     <label class="type" for="type_voorstelling">voorstelling
-    <span class="circle"></span>
+    <span class="circle try"></span>
     </label>
 
     </div>
-    <input type="submit" value="zoek">
+    <input class="search__button" type="submit" value="zoek">
     </div>
     </form>
   </section>
@@ -48,73 +48,30 @@
   foreach($events as $event) {
     ?>
       <li class='programma-item'>
-
-
-
- <!-- <picture class="programma__foto">
-          <source
-            type="image/webp"
-            srcset="
-              assets/img/optim/<?php echo $event['foto'];?>_100.webp,
-              assets/img/optim/<?php echo $event['foto'];?>_20.webp,
-              assets/img/optim/<?php echo $event['foto'];?>_33.webp,
-              assets/img/optim/<?php echo $event['foto'];?>_50.webp,
-              assets/img/optim/<?php echo $event['foto'];?>_67.webp,
-              assets/img/optim/<?php echo $event['foto'];?>_75.webp,
-              assets/img/optim/<?php echo $event['foto'];?>_85.webp,
-              assets/img/optim/<?php echo $event['foto'];?>_100.webp,
-              assets/img/optim/<?php echo $event['foto'];?>_200.webp,
-            "
-          />
-          <source
-            type="image/jpeg"
-            srcset="
-              assets/img/optim/<?php echo $event['foto'];?>_100.jpg,
-              assets/img/optim/<?php echo $event['foto'];?>_20.jpg,
-              assets/img/optim/<?php echo $event['foto'];?>_33.jpg,
-              assets/img/optim/<?php echo $event['foto'];?>_50.jpg,
-              assets/img/optim/<?php echo $event['foto'];?>_67.jpg,
-              assets/img/optim/<?php echo $event['foto'];?>_75.jpg,
-              assets/img/optim/<?php echo $event['foto'];?>_85.jpg,
-              assets/img/optim/<?php echo $event['foto'];?>_100.jpg,
-              assets/img/optim/<?php echo $event['foto'];?>_200.jpg,
-
-            "
-          />
-          <img
-            src="assets/img/optim/<?php echo $event['foto'];?>_33.jpg"
-            alt="img"
-            width="100"
-            height="100"
-          />
-        </picture> -->
-
-
-
-
-
-
-
-
-
-
         <article>
         <a href="index.php?page=detail&amp;id=<?php echo $event['id']; ?>">
         <img  class='programma__foto' src="assets/img/orig/<?php echo $event['foto'];?>.jpg" alt="" height="200px">
         </a>
+
         <div class="programma__text">
-              <h3 class=""><?php echo $event["titel"];?></h3>
-              <h4 class=""><?php echo $event["artiest"];?></h4>
-            </div>
+              <h3 class="programma__titel"><?php echo $event["titel"];?></h3>
+              <h4 class="programma__artiest"><?php echo $event["artiest"];?></h4>
+              <div class="programma__naast">
+              <div class="programma__elementen__naast">
+              <img  class='' src="assets/img/klok.svg" height="30px" width="30px">
+              <p class=""><?php echo $event["uur"];?></p>
+              </div>
+              <div class="programma__elementen__naast">
+              <img  class='' src="assets/img/kalender.svg" height="30px" width="30px">
+              <p class=""><?php echo $event["dag"];?></p>
+              </div>
+              </div>
+              </div>
+
+
         </article>
 
-        <?php
-        foreach($times as $time) {
-          if ($time['acts_id'] == $event['id']){
-            echo $time['uur'];
-          }
-        }
-        ?>
+
 
         </li>
     <?php

@@ -42,7 +42,7 @@
 
      <aside>
       <img class="aside-ster" src="assets/img/ster.svg" alt="" width="100px">
-      <p class='aside-text'>nog <span class="countdown" id="demo"></span> nachtjes slapen tot het intertnationaal straatheater festival</p>
+      <p class='aside-text'>nog <span class="countdown" id="demo"></span> nachtjes slapen tot het internationaal straatheater festival</p>
     </aside>
     </header>
 
@@ -52,29 +52,32 @@
 
 
     <footer>
-      <div class="footer-text">
+      <div class="footer__text">
       <h1 class="logo-footer"><p class="hidden">internationaal straattheater festival Beveren</p><img src="assets/img/logo-groot.svg" width="100rem" alt=""></h1>
-      <h3>contact</h3>
       <div class="contact">
+      <h3 class="footer__titel">contact</h3>
+
         <p>Dienst projectcoördinatie</p>
         <p>03 750 16 29</p>
         <p>erik.apers@beveren.be</p>
         <p>Stationstraat 2 - 9120 Beveren</p>
       </div>
 
-<div class="volg ons">
-   <h3>volg ons</h3>
+<div class="footer__socialmedia">
+   <h3 class="footer__titel">volg ons</h3>
+   <div class="naast">
    <a href="">
-   <img src="assets/img/facebook.svg" width="40px" alt=""><span class="hidden">facebook</span>
+   <img src="assets/img/facebook.svg" width="30px" alt=""><span class="hidden">facebook</span>
    </a>
 
    <a href="">
-   <img src="assets/img/instagram.svg" width="40px" alt=""><span class="hidden">instagram</span>
+   <img src="assets/img/instagram.svg" width="30px" alt=""><span class="hidden">instagram</span>
    </a>
    </div>
+   </div>
 
-   <h3>praktische info</h3>
-   <div class="contact">
+   <div class="footer__info">
+   <h3 class="footer__titel">praktische info</h3>
    <a href="">toegankelijkheid</a>
    <a href="">programma</a>
    <a href="">activiteiten</a>

@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/img/logo-groot.png" type="image/x-icon"/>
+
 
   <script>
   WebFontConfig = {
@@ -54,8 +56,9 @@
     <footer>
       <div class="footer__text">
       <h1 class="logo-footer"><p class="hidden">internationaal straattheater festival Beveren</p><img src="assets/img/logo-groot.svg" width="100rem" alt=""></h1>
-      <h3 class="footer__titel">contact</h3>
       <div class="contact">
+      <h3 class="footer__titel">contact</h3>
+
         <p>Dienst projectcoördinatie</p>
         <p>03 750 16 29</p>
         <p>erik.apers@beveren.be</p>
@@ -64,7 +67,6 @@
 
 <div class="footer__socialmedia">
    <h3 class="footer__titel">volg ons</h3>
-
    <div class="naast">
    <a href="">
    <img src="assets/img/facebook.svg" width="30px" alt=""><span class="hidden">facebook</span>
@@ -76,8 +78,8 @@
    </div>
    </div>
 
-   <h3 class="footer__titel">praktische info</h3>
    <div class="footer__info">
+   <h3 class="footer__titel">praktische info</h3>
    <a href="">toegankelijkheid</a>
    <a href="">programma</a>
    <a href="">activiteiten</a>

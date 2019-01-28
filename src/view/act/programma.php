@@ -52,9 +52,20 @@
         <a href="index.php?page=detail&amp;id=<?php echo $event['id']; ?>">
         <img  class='programma__foto' src="assets/img/orig/<?php echo $event['foto'];?>.jpg" alt="" height="200px">
         </a>
+
         <div class="programma__text">
               <h3 class="programma__titel"><?php echo $event["titel"];?></h3>
               <h4 class="programma__artiest"><?php echo $event["artiest"];?></h4>
+              <div class="programma__naast">
+              <div class="programma__elementen__naast">
+              <img  class='' src="assets/img/klok.svg" height="30px" width="30px">
+              <p class=""><?php echo $event["uur"];?></p>
+              </div>
+              <div class="programma__elementen__naast">
+              <img  class='' src="assets/img/kalender.svg" height="30px" width="30px">
+              <p class=""><?php echo $event["dag"];?></p>
+              </div>
+              </div>
               </div>
 
 
