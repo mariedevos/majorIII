@@ -5,7 +5,7 @@
 <h3 class="detail__artiest"><?php echo $detailAct['artiest'];?></h3>
 </div>
 
-<img class='detail__foto' src="assets/img/orig/<?php echo $detailAct['foto'];?>.jpg" alt="" height="200px">
+<img class='detail__foto' src="assets/img/orig/<?php echo $detailAct['foto'];?>.jpg" alt="<?php echo $detailAct['alt'];?>" height="200px">
 
 <div class="detail__2">
 <p class="detail__info-text"><?php echo $detailAct['info'];?></p>
@@ -14,15 +14,15 @@
 </div>
 
 <div class="detail__info">
-<img class='' src="assets/img/klok.svg" alt="" width="30px" height="30px">
+<img class='' src="assets/img/klok.svg" alt="klok icoon" width="30px" height="30px">
 <p class="detail__info_text" ><?php echo $detailActData['uur'];?></p>
 
 
-<img class='' src="assets/img/kalender.svg" alt="" width="30px" height="30px">
+<img class='' src="assets/img/kalender.svg" alt="kalender icoon" width="30px" height="30px">
 <p class="detail__info_text"><?php echo $detailActData['dag'];?></p>
 
 
-<img class='' src="assets/img/locatie.svg" alt="" width="30px" height="30px">
+<img class='' src="assets/img/locatie.svg" alt="locatie icoon" width="30px" height="30px">
 <p class="detail__info_text"><?php echo $detailActData['locatie'];?></p>
 </div>
 
@@ -40,7 +40,7 @@ if(!empty($detailAct['film'])){
 
 <div class="map">
 <h3 class="detail__kaart__titel">waar is <?php echo $detailAct['titel'];?> te zien? </h3>
-<img class="detail__kaart__img" src="assets/img/kaartbeveren.svg" alt="">
+<img class="detail__kaart__img" src="assets/img/kaartbeveren.svg" alt="plattegrond van Beveren">
 </div>
 
 </section>

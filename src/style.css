@@ -1090,33 +1090,31 @@ label:checked {
   @media only screen and (min-width: 768px) {
     display:grid;
     grid-template-columns: 50vw 45vw;
-    grid-template-rows: 15vw 50vw 45vw 30vw;
+    grid-template-rows: 15vw 50vw 25vw 50vw;
     grid-template-areas:
     " titel . "
     " img infotekst "
     " info info "
-    " film film "
     " map map ";
     }
 
     @media only screen and (min-width: 990px) {
       display:grid;
       grid-template-columns: 40vw 40vw;
-      grid-template-rows: 15vw 35vw 20vw 20vw;
+      grid-template-rows: 15vw 35vw 20vw 30vw;
       grid-gap: 2rem;
       margin-top: -6rem;
       grid-template-areas:
       " titel . "
       " img infotekst "
       " info info "
-      " film film "
-      " map map";
+      " map map ";
       }
 
       @media only screen and (min-width: 1124px) {
         display:grid;
         grid-template-columns: 40vw 50vw;
-        grid-template-rows: 8vw 15.5vw 20vw 20vw;
+        grid-template-rows: 8vw 15.5vw 10vw 30vw;
         grid-gap: 5rem;
         margin-top: -20rem;
         padding-top: 5rem;
@@ -1124,7 +1122,6 @@ label:checked {
         " titel . "
         " img infotekst "
         " img info "
-        " film film "
         " map map";
         }
 }
@@ -1161,10 +1158,10 @@ label:checked {
     }
     @media only screen and (min-width: 768px) {
       margin-left: 3rem;
-      margin-top:15rem;
         }
   @media only screen and (min-width: 990px) {
     margin-left: 6rem;
+    margin-top: 0;
       }
 }
 

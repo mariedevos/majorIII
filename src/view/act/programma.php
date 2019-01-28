@@ -50,7 +50,7 @@
       <li class='programma-item'>
         <article>
         <a href="index.php?page=detail&amp;id=<?php echo $event['id']; ?>">
-        <img  class='programma__foto' src="assets/img/orig/<?php echo $event['foto'];?>.jpg" alt="" height="200px">
+        <img  class='programma__foto' src="assets/img/orig/<?php echo $event['foto'];?>.jpg" alt="<?php echo $event['alt'];?>" height="200px">
         </a>
 
         <div class="programma__text">
