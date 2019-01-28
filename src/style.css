@@ -1128,6 +1128,10 @@ label:checked {
 
 .detail__film{
   grid-area: film;
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 3rem;
+    }
   @media only screen and (min-width: 990px) {
     margin-left: 6rem;
     }

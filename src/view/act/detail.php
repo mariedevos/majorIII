@@ -26,6 +26,15 @@
 <p class="detail__info_text"><?php echo $detailActData['locatie'];?></p>
 </div>
 
+
+<div class="map">
+<h3 class="detail__kaart__titel">waar is <?php echo $detailAct['titel'];?> te zien? </h3>
+<img class="detail__kaart__img" src="assets/img/kaartbeveren.svg" alt="plattegrond van Beveren">
+</div>
+
+</section>
+
+<article>
 <?php
 if(!empty($detailAct['film'])){
 ?>
@@ -36,11 +45,4 @@ if(!empty($detailAct['film'])){
 </video>
 </article>
 <?php }?>
-
-
-<div class="map">
-<h3 class="detail__kaart__titel">waar is <?php echo $detailAct['titel'];?> te zien? </h3>
-<img class="detail__kaart__img" src="assets/img/kaartbeveren.svg" alt="plattegrond van Beveren">
-</div>
-
-</section>
+</article>
