@@ -16,9 +16,6 @@ class ActController extends Controller {
 
   public function index() {
     $acts = $this->ActDAO->selectAllLimit();
-
-// hier over je array lopen
-
     $this->set('acts', $acts);
   }
 
@@ -30,8 +27,6 @@ class ActController extends Controller {
 
     $events=$this->DataDAO->selectAllByFilters($data);
 
-
-
     if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
 
       header('Content-Type: application/json');
@@ -42,25 +37,6 @@ class ActController extends Controller {
     $times = $this->ActDAO->selectTimes();
     $this->set('times', $times);
   }
-
-  // public function filterSystem(){
-  //   $data = array(
-  //     'dag'=> (!empty($_GET['dag'])) ? $_GET['dag'] : '',
-  //     'type'=> (!empty($_GET['type'])) ? $_GET['type'] : '',
-  //   );
-
-  //   $events=$this->DataDAO->selectAllByFilters($data);
-  //   // foreach events, daarbinnen naar database om de acts ophalen die bij dat event horen -> velden toevoegen met de timing die erin zit
-  //   // met [] toevoegen (opzoeken) =>
-  // }
-
-
-  // public function detail() {
-  //   $acts = $this->ActDAO->selectById($id);
-  //   var_dump($acts);
-  //   // select id, id=1,
-  //   $this->set('acts', $acts);
-  // }
 
   public function detail() {
     if(empty($_GET['id']) || !$events = $this->DataDAO->selectById($_GET['id'])){
@@ -82,9 +58,5 @@ class ActController extends Controller {
       $detailActData = $this->DataDAO->selectByData($_GET['id']);
     }
     $this->set('detailActData', $detailActData);
-
-
   }
-
-
 }

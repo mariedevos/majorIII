@@ -1,4 +1,4 @@
-require('./styles.css');
+require('./style.css');
 // {
 //   const $filterForm = document.querySelector(`.form`),
 //     $acts = document.querySelector(`.programma`);
@@ -59,24 +59,9 @@ require('./styles.css');
 // }
 
 const countDownDate = new Date('Aug 24, 2019').getTime();
-
-// Update the count down every 1 second
 const x = setInterval(function() {
-
-  // Get todays date and time
   const now = new Date().getTime();
-
-  // Find the distance between now and the count down date
   const distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-  // Display the result in the element with id="demo"
-  document.getElementById('demo').innerHTML = `${days  }`;
-
-  // If the count down is finished, write some text
-
+  document.getElementById('demo').innerHTML = `${days}`;
 });
-
-

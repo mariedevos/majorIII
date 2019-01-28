@@ -1,12 +1,14 @@
 :root {
-  --client-dark-grey: #666;
-  --client-darkest-grey: #444;
-  --client-black: #222;
-  --client-blue: #407ab1;
+  --client-purple: #613c6b;
+  --client-white: #f2f0ed;
+  --client-blue-green: #A0D1C6;
+  --client-red-orange: #D0523A;
+  --client-yellow: #F9C553;
 }
 
 @custom-media --xs screen and (min-width: 0);
-@custom-media --sm screen and (min-width: 23em);
-@custom-media --md screen and (min-width: 38em);
-@custom-media --lg screen and (min-width: 60em);
-@custom-media --xl screen and (min-width: 86em);
+@custom-media --sm screen and (min-width: 23em); /* 320 */
+@custom-media --md screen and (min-width: 38em); /* 600 */
+@custom-media --lg screen and (min-width: 60em); /* 768 */
+@custom-media --xl screen and (min-width: 86em); /* 990 */
+@custom-media --xl screen and (min-width: 86em); /* 1024 */

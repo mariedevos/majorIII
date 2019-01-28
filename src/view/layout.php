@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="assets/img/logo-groot.png" type="image/x-icon"/>
-
-
   <script>
   WebFontConfig = {
     custom: {
@@ -25,14 +22,14 @@
 
   </script>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>major III</title>
+  <title>ISB</title>
   <?php echo $css;?>
 </head>
 <body>
   <header>
 
-<h1 class='logo-boven'>
-      <a href="index.php?page=home" class='logo-home'><img src="assets/img/logo-groot.svg" alt="" class="logo-foto" width="100px" height= "100px"></a>
+<h1 class='logo__boven'>
+      <a href="index.php?page=home" class='logo__home'><img src="assets/img/logo-groot.svg" alt="" class="logo__foto" width="100px" height= "100px"></a>
       <p class="hidden">internationaal straattheater festival Beveren</p></h1>
     <nav>
       <ul class="navigatie">
@@ -43,8 +40,8 @@
     </nav>
 
      <aside>
-      <img class="aside-ster" src="assets/img/ster.svg" alt="" width="100px">
-      <p class='aside-text'>nog <span class="countdown" id="demo"></span> nachtjes slapen tot het internationaal straatheater festival</p>
+      <img class="aside__ster" src="assets/img/ster.svg" alt="" width="100px">
+      <p class='aside__text'>nog <span class="countdown" id="demo"></span> nachtjes slapen tot het internationaal straatheater festival</p>
     </aside>
     </header>
 

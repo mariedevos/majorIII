@@ -11,15 +11,6 @@ class DAO {
 	private static $sharedPDO;
   protected $pdo;
 
-
-  // private static $dbHost = "ID276356_major3.db.webhosting.be";
-	// private static $dbName = "ID276356_major3";
-	// private static $dbUser = "ID276356_major3";
-	// private static $dbPass = "isbeveren2018";
-	// private static $sharedPDO;
-	// protected $pdo;
-
-  // Constructor
 	function __construct() {
 
 		if(empty(self::$sharedPDO)) {
@@ -32,9 +23,6 @@ class DAO {
 		$this->pdo =& self::$sharedPDO;
 
 	}
-
-  // Methods
-
 }
 
  ?>

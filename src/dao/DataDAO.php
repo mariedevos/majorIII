@@ -11,15 +11,6 @@ class DataDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  // public function selectById($id){
-  //   $sql = "SELECT * FROM `data` INNER JOIN `acts` ON `acts_id` = `id`";
-  //   $stmt = $this->pdo->prepare($sql);
-  //   $stmt->bindValue(':id', $id);
-  //   $stmt->execute();
-  //   return $stmt->fetch(PDO::FETCH_ASSOC);
-  // }
-
-
   public function selectById($id){
     $sql = "SELECT * FROM `acts` WHERE `id` = :id";
     $stmt = $this->pdo->prepare($sql);
@@ -59,18 +50,10 @@ class DataDAO extends DAO {
     foreach($results as $result){
       if(!isset($resultsGroups[$result['id']]))  $resultsGroups[$result['id']] = array();
       $resultsGroups[$result['id']] = $result;
-      // $resultsGroups[$result['id']] = $result;
     }
 
     return $resultsGroups;
   }
-
-  // public function selectById(){
-  //   $sql = "SELECT * FROM `data` INNER JOIN `acts` ON `acts_id` = `id`";
-  //   $stmt = $this->pdo->prepare($sql);
-  //   $stmt->execute();
-  //   return $stmt->fetchAll(PDO::FETCH_ASSOC);
-  // }
 
   public function selectDay(){
     $sql = "SELECT * FROM `data` WHERE `dag`";
@@ -79,12 +62,4 @@ class DataDAO extends DAO {
   public function groupByType(){
     $sql = "SELECT * FROM `data` GROUP BY `type`";
   }
-
-  // public function selectById($id){
-  //   $sql = "SELECT * FROM `data` INNER JOIN `acts` ON `acts_id` = `id` WHERE `acts_id` = :id";
-  //   $stmt = $this->pdo->prepare($sql);
-  //   $stmt->bindValue(':id', $id);
-  //   $stmt->execute();
-  //   return $stmt->fetchAll(PDO::FETCH_ASSOC);
-  // }
 }
